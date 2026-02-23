@@ -1,0 +1,334 @@
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Hero Background (Darkened for Contrast) --- */
+.hero {
+    height: 100vh;
+    /* Darkened from 0.3 to 0.6 for that premium look */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../images/hero_background.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* --- Refined Glassmorphism Navigation --- */
+.navbar {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1350px;
+    /* Less transparent (0.95) for a more high-end feel */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 60px;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    /* Smaller text with spacing for luxury feel */
+    font-size: 0.65rem; 
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+/* --- Buttons --- */
+.nav-btn {
+    background: #000;
+    color: #fff !important;
+    padding: 8px 18px !important;
+    border-radius: 30px;
+    font-size: 0.6rem !important;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 45px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- Hero Typography --- */
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin: 15px 0;
+    max-width: 900px;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.subtext {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* --- Premium Section 2 Styles --- */
+.connections-premium {
+    padding: 120px 0;
+    background-color: #fdfbf7; /* Soft champagne/off-white */
+    overflow: hidden;
+}
+
+.luxury-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 80px;
+    padding: 0 40px;
+}
+
+/* Image Styling with Accent */
+.image-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.nomsa-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 2px;
+    z-index: 2;
+    position: relative;
+    filter: contrast(1.05); /* Makes the red dress pop */
+}
+
+.image-accent-box {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 200px;
+    height: 300px;
+    background-color: #d4af3733; /* Very faint gold */
+    z-index: 1;
+}
+
+/* Content Styling */
+.content-wrapper {
+    flex: 1.2;
+}
+
+.gold-subtitle {
+    display: block;
+    color: #D4AF37;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.serif-title {
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #1a1a1a;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.serif-title em {
+    font-style: italic;
+    font-family: serif; /* Use a built-in serif or link a Google Serif font */
+}
+
+.premium-intro {
+    font-size: 1.25rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.feature-item h4 {
+    color: #D4AF37;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.feature-item p, .premium-body {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+/* Luxury Button */
+.luxury-btn {
+    display: inline-block;
+    padding: 18px 45px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    border: 1px solid #1a1a1a;
+}
+
+.luxury-btn:hover {
+    background-color: transparent;
+    color: #1a1a1a;
+}
+
+/* Our services */
+
+/* --- Services Premium Styles --- */
+.services-premium {
+    padding: 120px 0;
+    background-color: #fdfbf7; /* Matching the previous section */
+    text-align: center;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.serif-title-center {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.serif-title-center em {
+    font-style: italic;
+    font-family: serif;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Service Card Design */
+.service-card {
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 4px; /* Minimalist sharp edges look more premium */
+    border: 1px solid #f0e6d2; /* Very faint gold border */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+    border-color: #D4AF37;
+}
+
+/* Service Numbers instead of basic icons */
+.service-icon {
+    font-size: 0.8rem;
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Highlighted "Active" Card */
+.service-card.active {
+    background: #1a1a1a;
+    color: white;
+}
+
+.service-card.active h3, .service-card.active p {
+    color: white;
+}
+
+/* Ensure the grid cards handle the longer text beautifully */
+.service-card p {
+    font-size: 0.9rem; /* Slightly smaller for better readability of long blocks */
+    line-height: 1.6;
+    color: #666;
+}
+
+.service-card.active p {
+    color: #dfdfdf; /* Makes text easier to read on the black background */
+}
